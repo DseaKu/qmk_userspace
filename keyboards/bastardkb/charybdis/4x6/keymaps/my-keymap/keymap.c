@@ -31,6 +31,8 @@ enum custom_keycodes {
     DPARENTH = SAFE_RANGE,
     DBRACE,
     DBRACKET,
+    DDQOUT,
+    DQOUT,
 };
 
 
@@ -82,11 +84,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
                XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               RGB_MOD, KC_PIPE, KC_MINS, KC_QUOT, DPARENTH, DBRACE,    KC_CIRC, KC_PERC, KC_ASTR, KC_AMPR, KC_HASH, KC_BTN2,
+               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, KC_PERC, KC_ASTR, KC_AMPR, KC_HASH, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               XXXXXXX, KC_TILD, KC_SLSH,  KC_EQL, DBRACE, DBRACKET,      KC_AT, KC_EXLM, KC_PLUS, KC_BSLS,  KC_DLR, KC_PDOT,
+               XXXXXXX, KC_TILD, KC_SLSH,  KC_EQL,  DDQOUT,DQOUT,      KC_AT, KC_EXLM, KC_PLUS, KC_BSLS,  KC_DLR, KC_PDOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                  RCS(KC_TAB),  KC_SPC, LCTL(KC_TAB),      KC_BTN2,KC_LSFT,
                                                    KC_BTN2,KC_BSPC,        KC_BTN2
@@ -131,14 +133,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("()" SS_TAP(X_LEFT));
         }
         break;
+
     case DBRACE:
         if (record->event.pressed) {
             SEND_STRING("{}" SS_TAP(X_LEFT));
         }
         break;
+
     case DBRACKET:
         if (record->event.pressed) {
             SEND_STRING("[]" SS_TAP(X_LEFT));
+        }
+        break;
+
+    case DDQOUT:
+        if (record->event.pressed) {
+            SEND_STRING("\"\"" SS_TAP(X_LEFT));
+        }
+        break;
+
+    case DQOUT:
+        if (record->event.pressed) {
+            SEND_STRING("''" SS_TAP(X_LEFT));
         }
         break;
     }
