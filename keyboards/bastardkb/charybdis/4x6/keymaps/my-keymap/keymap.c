@@ -33,6 +33,7 @@ enum custom_keycodes {
     DBRACKET,
     DDQOUT,
     DQOUT,
+    TILDE,
 };
 
 
@@ -88,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               XXXXXXX, KC_TILD, KC_SLSH,  KC_EQL,  DDQOUT,DQOUT,      KC_AT, KC_EXLM, KC_PLUS, KC_BSLS,  KC_DLR, KC_PDOT,
+               KC_EXLM, TILDE, KC_SLSH,  KC_EQL,  DDQOUT,DQOUT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                  RCS(KC_TAB),  KC_SPC, LCTL(KC_TAB),      KC_BTN2,KC_LSFT,
                                                    KC_BTN2,KC_BSPC,        KC_BTN2
@@ -148,13 +149,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     case DDQOUT:
         if (record->event.pressed) {
-            SEND_STRING("\"\"" SS_TAP(X_LEFT));
+            SEND_STRING("\" \" " SS_TAP(X_LEFT));
         }
         break;
 
     case DQOUT:
         if (record->event.pressed) {
-            SEND_STRING("''" SS_TAP(X_LEFT));
+            SEND_STRING("' ' " SS_TAP(X_LEFT));
+        }
+        break;
+
+    case TILDE:
+        if (record->event.pressed) {
+            SEND_STRING("~ ");
         }
         break;
     }
