@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
  KC_ESC,LSFT_T(KC_S),GUI_T(KC_H),LALT_T(KC_N),LCTL_T(KC_T), KC_COMM,    KC_DOT ,LCTL_T(KC_A),LALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I), KC_BSPC,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-              KC_QUES ,    KC_F,    KC_M,    KC_V,    KC_C,KC_ENTER,       KC_G,    KC_P, KC_X   ,  KC_K  , KC_Y   , KC_DQUO,
+              KC_QUES ,    KC_F,    KC_M,    KC_V,    KC_C,KC_ENTER,       KC_G,    KC_P, KC_X   ,  KC_K  , KC_Y   , KC_EQL,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                             KC_LEFT, LT(LAYER_LOWER,KC_SPC),KC_RGHT,     KC_UP ,  KC_LSFT,
                                                      KC_BTN1,KC_TAB,     KC_DOWN
@@ -83,13 +83,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
+               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, KC_ASTR , KC_AMPR, KC_LPRN, KC_RPRN, KC_UNDS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, KC_PERC, KC_ASTR, KC_AMPR, KC_HASH, KC_BTN2,
+               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, DDQOUT,DQOUT, KC_AMPR, KC_HASH, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_EXLM, TILDE, KC_SLSH,  KC_EQL,  DDQOUT,DQOUT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
+               KC_EXLM, TILDE, KC_SLSH, KC_ASTR, KC_PERC,DQOUT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                  RCS(KC_TAB),  KC_SPC, LCTL(KC_TAB),      KC_BTN2,KC_LSFT,
                                                    KC_BTN2,KC_BSPC,        KC_BTN2
