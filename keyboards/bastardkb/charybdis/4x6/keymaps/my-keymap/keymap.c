@@ -31,8 +31,10 @@ enum custom_keycodes {
     DPARENTH = SAFE_RANGE,
     DBRACE,
     DBRACKET,
-    DDQOUT,
-    DQOUT,
+    DDQUOT,
+    DQUOT,
+    SDQUOT,
+    SQUOT,
     TILDE,
 };
 
@@ -83,13 +85,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, KC_ASTR , KC_AMPR, KC_LPRN, KC_RPRN, KC_UNDS,
+               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, SDQUOT , SQUOT, KC_LPRN, KC_RPRN, KC_UNDS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, DDQOUT,DQOUT, KC_AMPR, KC_HASH, KC_BTN2,
+               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, DDQUOT,DQUOT, KC_AMPR, KC_HASH, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_EXLM, TILDE, KC_SLSH, KC_ASTR, KC_PERC,DQOUT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
+               KC_EXLM, TILDE, KC_SLSH, KC_ASTR, KC_PERC,DQUOT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                  RCS(KC_TAB),  KC_SPC, LCTL(KC_TAB),      KC_BTN2,KC_LSFT,
                                                    KC_BTN2,KC_BSPC,        KC_BTN2
@@ -147,15 +149,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    case DDQOUT:
+    case DDQUOT:
         if (record->event.pressed) {
             SEND_STRING("\" \" " SS_TAP(X_LEFT));
         }
         break;
 
-    case DQOUT:
+    case DQUOT:
         if (record->event.pressed) {
             SEND_STRING("' ' " SS_TAP(X_LEFT));
+        }
+        break;
+
+    case SDQUOT:
+        if (record->event.pressed) {
+            SEND_STRING("\" ");
+        }
+        break;
+
+    case SQUOT:
+        if (record->event.pressed) {
+            SEND_STRING("' ");
         }
         break;
 
