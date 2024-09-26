@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC,  SDQUOT,   SQUOT, KC_LPRN, KC_RPRN, KC_UNDS,
+                 KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                RGB_MOD, KC_PIPE,   SQUOT,  DBRACE,DPARENTH,DBRACKET,    KC_CIRC,  DDQUOT,   DQUOT, KC_AMPR, KC_HASH, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
