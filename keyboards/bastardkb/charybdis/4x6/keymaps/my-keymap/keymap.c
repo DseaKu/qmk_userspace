@@ -70,31 +70,31 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-             KC_DELETE,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,     KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,
+             KC_DELETE,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,     KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22, KC_CAPS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_COLN,    KC_W,    KC_L,    KC_R,    KC_B,    KC_Z,   KC_SCLN ,    KC_Q,    KC_U,    KC_D,    KC_J, DRGSCRL,
+               KC_MINS,    KC_W,    KC_L,    KC_R,    KC_B,    KC_Z,    KC_SCLN,    KC_Q,    KC_U,    KC_D,    KC_J, DRGSCRL,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
- KC_ESC,LSFT_T(KC_S),GUI_T(KC_H),LALT_T(KC_N),LCTL_T(KC_T), KC_COMM,    KC_DOT ,LCTL_T(KC_A),LALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I), KC_BSPC,
+ KC_ESC,LSFT_T(KC_S),GUI_T(KC_H),LALT_T(KC_N),LCTL_T(KC_T), KC_COMM,     KC_DOT,LCTL_T(KC_A),LALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I), KC_BSPC,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-              KC_QUES ,    KC_F,    KC_M,    KC_V,    KC_C,KC_ENTER,       KC_G,    KC_P, KC_X   ,  KC_K  , KC_Y   , KC_EQL,
+               KC_EQL ,    KC_F,    KC_M,    KC_V,    KC_C,KC_ENTER,       KC_G,    KC_P,    KC_X,    KC_K,    KC_Y, KC_SLSH,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                            KC_LEFT, LT(LAYER_LOWER,KC_SPC),KC_RGHT,     KC_UP ,  KC_LSFT,
+                                            KC_LEFT, KC_SPC,KC_RGHT,      KC_UP,   LOWER,
                                                      KC_BTN1,KC_TAB,     KC_DOWN
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_LOWER] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC, SDQUOT , SQUOT, KC_LPRN, KC_RPRN, KC_UNDS,
+               XXXXXXX, KC_EXLM,   KC_AT, KC_QUOT, KC_LBRC, KC_RBRC,    KC_CIRC,  SDQUOT,   SQUOT, KC_LPRN, KC_RPRN, KC_UNDS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               RGB_MOD, KC_PIPE, KC_MINS, DBRACE, DPARENTH, DBRACKET,    KC_CIRC, DDQUOT,DQUOT, KC_AMPR, KC_HASH, KC_BTN2,
+               RGB_MOD, KC_PIPE,   SQUOT,  DBRACE,DPARENTH,DBRACKET,    KC_CIRC,  DDQUOT,   DQUOT, KC_AMPR, KC_HASH, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_EXLM, TILDE, KC_SLSH, KC_ASTR, KC_PERC,DQUOT,      KC_AT, KC_EXLM,KC_PLUS ,KC_BSLS ,  KC_DLR, KC_PDOT,
+               KC_EXLM,   TILDE,  SDQUOT, KC_DQUO, KC_PERC, KC_CAPS,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_PDOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                 RCS(KC_TAB),  KC_SPC, LCTL(KC_TAB),      KC_BTN2,KC_LSFT,
-                                                   KC_BTN2,KC_BSPC,        KC_BTN2
+                                    RCS(KC_TAB),KC_SPC,LCTL(KC_TAB),    KC_BTN2, XXXXXXX,
+                                                    KC_BTN2,KC_BTN3,    KC_BTN2
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
