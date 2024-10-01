@@ -15,8 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
+#define TAPPING_TERM 175
+#define TAPPING_TERM_PER_KEY
 
-#define PERMISSIVE_HOLD
+//#define PERMISSIVE_HOLD
 #ifdef VIA_ENABLE
 /* VIA configuration. */
 #    define DYNAMIC_KEYMAP_LAYER_COUNT 4
