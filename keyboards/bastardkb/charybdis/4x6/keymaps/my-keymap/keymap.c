@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
                  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               RGB_MOD, KC_PIPE,   SQUOT,  DBRACE,DPARENTH,DBRACKET,    KC_CIRC,  DDQUOT,   DQUOT, KC_AMPR, KC_HASH, KC_BTN2,
+               KC_LBRC, KC_PIPE,   SQUOT,  DBRACE,DPARENTH,DBRACKET,    KC_CIRC,  DDQUOT,   DQUOT, KC_AMPR, KC_HASH, KC_RBRC,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
