@@ -29,6 +29,7 @@ enum charybdis_keymap_layers {
 
 enum custom_keycodes {
     DPARENTH = SAFE_RANGE,
+    /*
     DBRACE,
     DBRACKET,
     DDQUOT,
@@ -36,8 +37,8 @@ enum custom_keycodes {
     SDQUOT,
     SQUOT,
     TILDE,
+    ESZETT,*/
 };
-
 
 /** \brief Automatically enable sniping-mode on the pointer layer. */
 #define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
@@ -70,11 +71,11 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-             KC_DELETE,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,     KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22, KC_CAPS,
+             KC_DELETE,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,     KC_F18,  KC_F19,  KC_F20,  KC_A, KC_BTN1, KC_BTN2,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                KC_MINS,    KC_W,    KC_L,    KC_R,    KC_B,    KC_Z,    KC_SCLN,    KC_Q,    KC_U,    KC_D,    KC_J, DRGSCRL,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
- KC_ESC,LSFT_T(KC_S),GUI_T(KC_H),LALT_T(KC_N),LCTL_T(KC_T), KC_COMM,     KC_DOT,LCTL_T(KC_A),LALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I), KC_BSPC,
+ KC_ESC,LSFT_T(KC_S),GUI_T(KC_H),LALT_T(KC_N),LCTL_T(KC_T), KC_COMM,     KC_DOT,LCTL_T(KC_A),RALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I), KC_BSPC,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                KC_EQL ,    KC_F,    KC_M,    KC_V,    KC_C,KC_ENTER,       KC_G,    KC_P,    KC_X,    KC_K,    KC_Y, KC_SLSH,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
@@ -88,13 +89,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
                  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_LBRC, KC_PIPE,   SQUOT,  DBRACE,DPARENTH,DBRACKET,    KC_CIRC,  DDQUOT,   DQUOT, KC_AMPR, KC_HASH, KC_RBRC,
+               XXXXXXX, KC_QUOT, KC_DQUO, KC_LCBR ,KC_LPRN, KC_LBRC,    KC_RBRC,  KC_RPRN,  KC_RCBR, KC_AMPR, KC_HASH, XXXXXXX,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_EXLM,   TILDE,  SDQUOT, KC_DQUO, KC_PERC, KC_CAPS,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_PDOT,
+               XXXXXXX, KC_CAPS , KC_PIPE, KC_DQUO, KC_PERC, XXXXXXX,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_TILD,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                    RCS(KC_TAB),KC_SPC,LCTL(KC_TAB),    KC_BTN2, XXXXXXX,
+                                    RCS(KC_TAB),KC_SPC,LCTL(KC_TAB),    XXXXXXX, XXXXXXX,
                                                     KC_BTN2,KC_BTN3,    KC_BTN2
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
@@ -107,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                KC_MPLY, KC_LEFT,   KC_UP, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_MUTE,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
+               KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                           _______, _______, XXXXXXX,    _______, XXXXXXX,
                                                    _______, _______,    XXXXXXX
@@ -130,6 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+/*
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case DPARENTH:
@@ -179,17 +181,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("~ ");
         }
         break;
+
     }
     return true;
 };
+*/
+
 // clang-format on
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LSFT_T(KC_S):
-            return 140;
+            return 130;
         case LSFT_T(KC_I):
-            return 140;
+            return 130;
         default:
             return TAPPING_TERM;
     }
