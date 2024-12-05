@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_MPLY, KC_CAPS , KC_PIPE, KC_DQUO, KC_PERC,KC_MXXT,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_TILD,
+               KC_MPLY, KC_CAPS , KC_PIPE, KC_DQUO, KC_PERC,KC_MNXT,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_TILD,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     RCS(KC_TAB),KC_SPC,LCTL(KC_TAB),    DF(LAYER_RAISE), XXXXXXX,
                                                     KC_BTN2,KC_BTN3,    KC_BTN2
