@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
    KC_0,LSFT_T(KC_1),GUI_T(KC_2),LALT_T(KC_3),LCTL_T(KC_4), KC_COMM,     KC_DOT,LCTL_T(KC_5),LALT_T(KC_6),GUI_T(KC_7), LSFT_T(KC_8),KC_9,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               XXXXXXX, KC_CAPS , KC_PIPE, KC_DQUO, KC_PERC, XXXXXXX,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_TILD,
+               KC_MPLY, KC_CAPS , KC_PIPE, KC_DQUO, KC_PERC,KC_NEXT,      KC_AT, KC_EXLM, KC_ASTR, KC_BSLS,  KC_DLR, KC_TILD,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     RCS(KC_TAB),KC_SPC,LCTL(KC_TAB),    DF(LAYER_RAISE), XXXXXXX,
                                                     KC_BTN2,KC_BTN3,    KC_BTN2
@@ -108,10 +108,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                  KC_G, KC_LSFT,    KC_A,    KC_S,    KC_D,    KC_F,       KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                 KC_B, KC_LCTL,    PT_Z,    KC_X,    KC_C,    KC_V,       KC_N,    KC_M, KC_COMM,  KC_DOT, PT_SLSH, KC_LALT,
+                 KC_B, KC_LCTL,    PT_Z,    KC_X,    KC_C,    KC_V,       KC_N,    KC_M, KC_COMM,  KC_DOT, PT_SLSH, QK_BOOT,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                          KC_LGUI, KC_SPC,   LOWER,    DF(LAYER_BASE),  KC_ENT,
-                                                  KC_LALT, KC_BSPC,     KC_DEL
+                                          KC_BTN2, KC_SPC, DRGSCRL,    DF(LAYER_BASE),  KC_ESC,
+                                                  KC_BTN1, KC_BTN3,     KC_DEL
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
