@@ -33,7 +33,7 @@ Use the `SNIPING_MODE` keycode to enable sniping mode on hold. Use the `SNIPING_
 Change the value of `CHARYBDIS_AUTO_SNIPING_ON_LAYER` to automatically enable sniping mode on layer change. By default, sniping mode is enabled on the pointer layer:
 
 ```c
-#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
+//#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 ```
 
 ### Auto pointer layer
