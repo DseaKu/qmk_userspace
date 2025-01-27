@@ -73,14 +73,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
              KC_QUOT,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,       KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSLS,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_MINS,
+               KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,     KC_SCLN,    KC_Q,    KC_U,    KC_R,    KC_J, KC_QOUT
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-    KC_ESC,LSFT_T(KC_A),GUI_T(KC_S),LALT_T(KC_D),LCTL_T(KC_F),KC_G,     KC_H  ,LCTL_T(KC_J),RALT_T(KC_K),GUI_T(KC_L),LSFT_T(KC_SCLN),KC_BSPC,
+    KC_ESC,LSFT_T(KC_A),GUI_T(KC_S),LALT_T(KC_D),LCTL_T(KC_F),KC_G,     KC_DOT ,LCTL_T(KC_A),RALT_T(KC_E),GUI_T(KC_O),LSFT_T(KC_I   ),KC_BSPC,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               KC_LBRC ,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_N, KC_M,  KC_COMM,KC_DOT, LT(LAYER_RAISE,KC_SLSH), KC_RBRC,
+               KC_LBRC ,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_G, KC_X,  KC_X   ,KC_K  , LT(LAYER_RAISE,KC_Y), KC_SLSH,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                            KC_LEFT, KC_SPC,KC_RGHT,      KC_UP,   KC_ENT,
-                                                     KC_BTN1,KC_DELETE,     KC_DOWN
+                                            KC_LEFT, KC_SPC,KC_RGHT,      KC_CAPS,   KC_ENT,
+                                                     KC_BTN1,KC_DELETE,     DF(LAYER_RAISE)
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -105,12 +105,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, SNIPING, KC_BTN3, KC_RALT, KC_RGUI, XXXXXXX,
+               XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    LSFT(KC_W), SNIPING, KC_BTN3, KC_RALT, KC_RGUI, XXXXXXX,
           // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-               XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, KC_BTN1, DRGSCRL, KC_BTN2, XXXXXXX, XXXXXXX,
+               XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    KC_BTN4, KC_BTN1, DRGSCRL, KC_BTN2, XXXXXXX, XXXXXXX,
           // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                           KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
-                                                   XXXXXXX, KC_BTN2,    KC_BTN2
+                                                   XXXXXXX, KC_BTN2,    DF(LAYER_BASE)
           //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
